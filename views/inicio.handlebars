@@ -1,0 +1,62 @@
+<a href="/cadastrar"><button     type="button " class="btn btn-danger" >Adicionar itens </button></a>
+<a href="/cadastro/usuario"><button type="button" class="btn btn-danger" >Cadastrar Cliente</button></a>
+
+
+{{#if user}}
+<a href="/logout"><button type="button"  class="btn btn-warning" >Sair</button></a>
+{{else}}
+<a href="/login"><button type="button"class="btn btn-danger" >Entrar</button></a>
+{{/if}}
+
+
+<style>
+
+a{
+    padding-right: 10px;
+}
+
+
+</style>
+
+
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Descrição </th>
+            <th scope="col">Valor</th>
+          <th scope="col">Tipo Do Lanche</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        {{#each pizzaria}}
+        <tr>
+            <th>{{idPizza}}</th>
+            <td>{{descricao}}</td>
+            <td>{{valor}}</td>
+             
+                <td> 
+                    <a href="/AcidornarPedido/{{idPizza}}/{{descricao}}/{{valor}} "><button type="submit" class="btn btn-info">Adiconar Pedido</button></a>
+                    <a href="/editar/{{idPizza}}"><button type="submit" class="btn btn-warning">Editar</button></a>
+                    <a href="/remover/{{idPizza}}"><button type="submit" class="btn btn-danger">Apagar</button></a>
+                    
+                </td></tr>
+        {{/each}}
+    </tbody>
+</table>
+ <form action="/FinalizarPedido" method="post">
+    <button type="submit" class="btn btn-warning">Criar Pedido</button>
+ </form>
+ 
+ <form action="/FinalizarPedido2" method="get">
+    <button type="submit" class="btn btn-warning">FinalizarPedido</button>
+ </form>
+ 
+
+
+  

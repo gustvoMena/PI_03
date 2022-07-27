@@ -1,0 +1,24 @@
+<h2>Comida {{idPizza}}</h2>
+<form action="/ediReq/{{idPizza}}" method="post">
+    <div class="mb-3">
+        <label class="form-label">Descrição</label>
+        <input class="form-control" type="text" name="descricao" value="{{descricao}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">valor</label>
+        <input class="form-control" type="number" name="valor" value="{{valor}}">
+    </div>
+    <div class="mb-3">
+ <div class="mb-3">
+        <label class="form-label">Tipo de lanche</label>
+        <select class="form-control  " name="tipoDolanche" value="{{tipoDolanche}} " >
+            <option   value="0" selected>Pizza</option>
+            <option value="1">  Laches</option>
+            <option value="2">Bebidas</option>
+        </select>
+  <br>
+      
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>

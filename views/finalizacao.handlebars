@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">IdPedido</th>
+            <th scope="col">IdCliente</th>
+            <th scope="col">IdPizaa</th>
+          <th scope="col">Valor</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        {{#each pedido}}
+        <tr>
+            <th>{{idPedido}}</th>
+        _     <td>{{descricao}}</td> 
+            <td>{{valor}}</td>
+          
+                <td>
+                    <a href="/editar/{{id}}"><button type="submit" class="btn btn-warning">Editar</button></a>
+                    <a href="/remover/{{id}}"><button type="submit" class="btn btn-danger">Apagar</button></a>
+                    
+                </td></tr>
+        {{/each}}
+    </tbody>
+</table>
