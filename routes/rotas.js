@@ -20,7 +20,7 @@ rotas.get("/remover/:id", admin,controlador.montarReqDelete)  //monta requisi√ß√
 
 rotas.get("/FinalizarPedido2", controladorPedido.buscarPedidoBanco);
 rotas.post("/FinalizarPedido", controladorPedido.inserirPedidoBanco);
-rotas.get("/AcidornarPedido/:id/:descricao/:valor",cliente,admin,controladorPedido.AdicionarPedido);
+rotas.get("/AcidornarPedido/:id/:descricao/:valor",cliente,controladorPedido.AdicionarPedido);
 
 
 rotas.get("/login",controladorUsuario.mostrarFormLogin)
