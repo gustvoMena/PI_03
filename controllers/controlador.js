@@ -128,7 +128,7 @@ pizzariaControlador.montarReqEdicao = function (req, res) {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
             proxy:{
-                host: "localhost",
+                host: "44.202.135.217",
                 port: 3000
             }
         }
@@ -144,7 +144,7 @@ pizzariaControlador.montarReqEdicao = function (req, res) {
 pizzariaControlador.montarReqDelete = function (req, res) {
     axios.delete('/' + req.params.id,{
         proxy:{
-            host: "localhost",
+            host: "44.202.135.217",
             port: 3000
         }
         
