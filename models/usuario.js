@@ -35,6 +35,6 @@ var usuario = banco.define("usuario",{
     timestamps: false
 })
 
-//usuario.sync() //cria a tabela
+usuario.sync() //cria a tabela
 
 module.exports = usuario

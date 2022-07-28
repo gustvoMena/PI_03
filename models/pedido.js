@@ -47,6 +47,6 @@ pedido.belongsToMany(pizzaria,{
 
 
 
-//banco.sync()
+banco.sync()
 
 module.exports = pedido

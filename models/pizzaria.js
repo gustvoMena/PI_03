@@ -27,6 +27,6 @@ var pizzaria = banco.define("pizzaria",{
 })
 
 
-//pizzaria.sync()
+pizzaria.sync()
 
 module.exports = pizzaria
